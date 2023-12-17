@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   
+<AutoCompleteTextView
+android:background="#918f8a"
+            android:id="@+id/et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:completionThreshold="1"
+            android:imeActionLabel="Go"
+            android:imeOptions="actionGo"
+            android:inputType="textUri"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="true" />
+
+    <RelativeLayout
+        android:id="@+id/webPad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/et">
+
+
+
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
+
+
+<ProgressBar
+            android:id="@+id/progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignTop="@id/webPad"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:max="100"
+            android:visibility="gone" />
+
+ 
+<LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#00000000"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp">
+
+        </LinearLayout>
+
+ 
+ 
+    <androidx.appcompat.widget.Toolbar
+        android:visibility="visible"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:id="@+id/toolbarBottom"
+        
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <LinearLayout android:layout_width="match_parent"
+            android:id="@+id/linearLayout1" android:layout_height="wrap_content">
+      
+      
+      
+      
+      
+                 <TextView android:id="@+id/tabs"
+
+                android:clickable="true"
+                android:background="@drawable/ic_filter_state"
+
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textStyle="bold"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text=""
+                android:ellipsize="middle"
+                android:focusable="true"
+                />
+        
+               <ImageView
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rowback"
+                android:src="@drawable/baseline_chevron_left_36"
+                android:clickable="true"
+                android:background="@drawable/ripple_material"
+                android:focusable="true" />
+      
+            <ImageView
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rowforward"
+                android:src="@drawable/baseline_chevron_right_36"
+                android:clickable="true"
+                android:background="@drawable/ripple_material"
+                android:focusable="true" />
+      
+        
+        
+        
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+ 
+ 
+</RelativeLayout>
